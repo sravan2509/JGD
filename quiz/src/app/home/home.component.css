@@ -1,0 +1,25 @@
+.img1{
+height: 150px;
+}
+.card-title{
+    text-align: center;
+}
+.none{
+    display: none;
+}
+.img2{
+    width: 225px;
+    margin-left:43%;
+    border-radius: 50%;
+}
+.txt1{
+    margin-left: 40%;
+    font-size: 24px;
+    text-transform: capitalize;
+}
+.txt2{
+    margin-left: 54%;
+    font-size: 16px;
+    text-transform: capitalize;
+    /* background-color: #ccafdb; */
+}

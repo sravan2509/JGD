@@ -1,0 +1,21 @@
+/* @import{cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"}; */
+.card{
+    background-color: rgb(78, 47, 74);
+    margin-left:-10% ;
+    margin-right: -5%;
+    margin-top: 5%;
+    color: rgb(218, 185, 213);
+    padding-left:4%;
+    padding-top: 8%;
+    padding-bottom: 8%;
+    padding-right: 4%;
+}
+.cus{
+    align-items: center;
+}
+img{
+    height: 80px;
+}
+
+
+

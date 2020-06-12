@@ -1,0 +1,30 @@
+.card{
+    margin-top: 6%;
+    margin-left: 20%;
+    padding: 4%;
+    color:  rgb(7, 6, 24);
+    max-width: 65%;
+    /* align-items: center; */
+    background-color: rgba(41, 211, 50, 0.74); 
+}
+form{
+    align-content: flex-end;
+}
+input{
+    max-width: 85%;
+    border:none;
+    
+}
+button{
+    background-color: rgba(7, 6, 24, 0.705);
+    color:  rgb(196, 201, 226);
+}
+button:hover{
+    background-color: rgba(7, 6, 24, 0.932);
+    color: seashell;
+}
+/* img{
+    margin-top: -20%;
+    margin-left: -20%;
+    border: rgba(41, 211, 50, 0.74);
+} */

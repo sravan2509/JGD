@@ -1,0 +1,87 @@
+
+<div class="card " >
+    <div class="header">Register</div>
+    <form #data="ngForm">
+        <!-- {{data.value | json}}
+        <hr>
+        {{binddata | json}} -->
+        <div class="form-group">
+            <label >first Name</label>
+            <input type="text"  required #fname="ngModel" [class.is-invalid]="fname.invalid && fname.touched"class="form-control" name="fname" [(ngModel)]="binddata.fname">
+             <small class="text-danger" [class.d-none]='fname.valid||fname.untouched'>enter name</small>
+        </div>
+        <div class="form-group">
+            <label >Last Name</label>
+            <input type="text"  class="form-control"name="lname" [(ngModel)]="binddata.lname">
+            <!-- <small class="text-danger" [class.d-none]='lname.valid||lname.untouched'>enter last name</small> -->
+
+        </div>
+    
+        <div class="form-group">
+            <label >Email</label>
+            <input type="email" required #email="ngModel" pattern=”^[a-zA-Z0–9]+@[a-zA-Z0–9-]+.[a-zA-Z0–9]+$” [class.is-invalid]="email.invalid && email.touched" class="form-control"name="email" [(ngModel)]="binddata.email">
+            <!-- <small [hidden]="email.valid || (email.pristine && email.untouched)">
+                Email is required and format should be <i>john@doe.com</i>.
+              </small>-->
+                    </div> 
+    
+        <div class="form-group">
+            <label >phone</label>
+            <input type="tel" required #pho="ngModel" pattern="^\d{10}$" [class.is-invalid]="pho.invalid && pho.touched" class="form-control"name="pho" [(ngModel)]="binddata.pho">
+            <div *ngIf="pho.errors && (pho.touched||pho.invalid)">
+                <small class="text-danger" *ngIf="pho.errors.required">phno req</small>
+                <small class="text-danger" *ngIf="pho.errors.pattern">phno must contain 10 digiots</small>
+                        
+            </div>
+        </div>
+    
+        <div class="mb-3">
+            <label >Gender</label>
+            <div class="form-check">
+            <input type="radio" name="gender"   class="form-check-input" value="male" [(ngModel)]="binddata.gender">
+            <label class="form check label">Male</label>
+            </div>
+            <div class="form-check">
+            <input type="radio" name="gender"  class="form-check-input" value="female" [(ngModel)]="binddata.gender">
+            <label class="form check label">female</label>
+            </div>
+        
+        </div>
+        <div class="form-group">
+          <select  class="customselect"name="interest" [(ngModel)]="binddata.interest">
+              <option  selected>choose ur interest</option>
+              <option *ngFor ="let i of interests">{{i}}</option>
+          </select>
+        </div>
+    
+        <div class="form-group">
+            <label >username</label>
+            <input type="text" required #username="ngModel" [class.is-invalid]="username.invalid && username.touched" class="form-control"name="username" [(ngModel)]="binddata.username">
+            <small class="text-danger" [class.d-none]='username.valid||username.untouched'>enter name</small>
+
+        </div>
+
+
+  
+      
+        <div class="form-group">
+            <label >password</label>
+            <input type="password" required #password="ngModel" [class.is-invalid]="password.invalid && password.touched"class="form-control"name="password" [(ngModel)]="binddata.password">
+            <small class="text-danger" *ngIf="password.invalid && (password.dirty||password.touched)"></small>
+        </div>
+     
+        <div class="form-group">
+            <label >conform password</label>
+            <input type="password" required #conformpassword="ngModel"  class="form-control"name="conformPassword"  [(ngModel)]="binddata.conformPassword"  compare="password" >
+            <!-- <div *ngIf="conformPassword.invalid && (conformPassword.touched||conformPassword.dirty)">
+                    <small class="text-danger" *ngIf="conformPassword.errors.required">conform password  req</small>
+                    <small class="text-danger" *ngIf="conformPassword.errors.compare">password mismatch</small>
+                            
+                </div>-->
+  
+        </div> 
+    
+        <button [disabled]="data.form.invalid"class="btn bcustom" type="submit"> Register</button>
+    </form>
+</div>
+<app-contact></app-contact>

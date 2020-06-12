@@ -1,0 +1,123 @@
+<!-- <div class="card">
+  <div class="row">
+    <div class="col">score:{{}}</div>
+    <div class="col">time:{{}}</div>
+  </div>
+  
+</div> -->
+<div class="container">
+    <div class="card" style="border: none;">
+      <div class="row " style="margin-top: 50px;">
+        <div class="col col-xs-12">
+          <div class="card">
+          <img class="card-img-top img1" src="../../assets/qimg/quiz1.JPG" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title" (click)="single()">single ans quiz</h5>
+          </div>
+          </div>
+        </div>
+        <div class="col col-xs-12">
+          <div class="card">
+            <img class="card-img-top img1" src="../../assets/qimg/quiz2.JPG" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title" (click)="mul()">multiple ans quiz</h5>
+            </div>
+            </div>
+        </div>
+        <div class="col col-xs-12">
+          <div class="card">
+            <img class="card-img-top img1" src="../../assets/qimg/write.JPG" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title" (click)="write()">written test</h5>
+            </div>
+            </div>
+        </div>   
+      </div>
+    </div>
+  </div>
+  <br>
+<div [class.none]="t">
+ <div class="container" >
+     <img class="img2"src="../../assets/qimg/short.JPG" alt="">
+     <div class="txt1">you haven't take any quiz</div>
+     <div class="txt2">get started</div>
+ </div> 
+</div>
+<div [class.none]="!sgl">
+    
+    
+
+<div class="card" *ngIf="!Sover;else elseA">
+    <div class="txt1"> single type answers quiz</div>
+  <div class="row">
+    <div class="col">time:{{time}}</div>
+    <div class="col">Score:{{Sscore}}</div>
+  </div>
+<div class="row">
+  <div class="col-sm-1">Q.N0:{{i.id}}</div>
+    <div class="col">
+      
+        <div class="row">
+            <div class="col-sm">
+           <button >{{i.q}}</button></div>
+        </div><br>
+        <div class="row">
+           <div class="col-sm">
+           <button (click)="check(i.opt[0],i.id)" >{{i.opt[0]}}</button></div>
+           <div class="col-sm">
+           <button (click)="check(i.opt[1],i.id)">{{i.opt[1]}}</button></div>
+        </div><br>
+        <div class="row">
+           <div class="col-sm">
+           <button (click)="check(i.opt[2],i.id)">{{i.opt[2]}}</button></div>
+           <div class="col-sm">
+           <button (click)="check(i.opt[3],i.id)">{{i.opt[3]}}</button></div>
+        </div> 
+  </div>
+</div>
+</div>
+
+<ng-template #elseA>
+    game over
+    <div [class.none]="!cong"><div class="txt1">congrates you have scored {{Sscore}}</div></div>
+    <div [class.none]="cong"> hey! you scored lessthan 10 i.e;{{Sscore}}</div>
+    <button style="margin-left: 45%;"(click)="single()">Restart the quiz</button>
+</ng-template> 
+
+
+</div>
+<div [class.none]="!mtp">
+   <div class="card" *ngIf="!Mover, else elseC"> multiple Answers type
+    <div class="row" >
+        <div class="col-sm-1">Q.N0:{{mq.id}} </div>
+          <div class="col">
+            
+              <div class="row">
+                  <div class="col-sm">
+                  {{mq.q}}   
+                 </div>
+              </div><br>
+              <div class="row">
+                <form action="" method="post">
+                 <div class="col-sm"><input type="checkbox" value="{{mq.opt[0]}}" name="favorite1" (click)="checkM($event,mq.opt[0])" /> {{mq.opt[0]}}</div>
+                 <div class="col-sm"><input type="checkbox" value="{{mq.opt[1]}}" name="favorite1" (click)="checkM($event,mq.opt[1])" /> {{mq.opt[1]}}</div>
+                 <div class="col-sm"><input type="checkbox" value="{{mq.opt[2]}}" name="favorite1" (click)="checkM($event,mq.opt[2])" /> {{mq.opt[2]}}</div>
+                 <div class="col-sm"><input type="checkbox" value="{{mq.opt[3]}}" name="favorite1" (click)="checkM($event,mq.opt[3])"/> {{mq.opt[3]}}</div>
+                       
+            </form>
+
+              </div> 
+        </div>
+      </div>
+      <div class="row"><div class="col-sm-1" (click)="submit(mq.id)">submit</div></div>
+</div>
+      <ng-template #elseC>
+          game over<br>you have scored {{Mscore}}
+          
+          <button style="margin-left: 45%;"(click)="mul()">Restart the quiz</button>
+      </ng-template> 
+      
+      
+      </div>
+
+<div [class.none]="!wrt">written Answers quiz</div>

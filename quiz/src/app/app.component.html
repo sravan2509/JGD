@@ -1,0 +1,29 @@
+
+<nav class="navbar navbar-expand-lg navbar-light navbar-custom">
+  <div class="container offset">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <a class="navbar-brand h1   font-weight-bolder"herf="#" ><img src="../assets/qimg/logo.JPG" alt="" style="height: 50px;padding: 0px;"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="border:  solid 2px black;outline: none;">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+      <ul class="nav navbar-nav menu_nav ml-auto">
+        <li class="nav-item active1"><a class="nav-link"  routerLink="/home" routerLinkActive="active">Home</a></li>
+        <li class="nav-item active1"><a class="nav-link" routerLink="/about" routerLinkActive="active">About</a></li>
+        <li class="nav-item active1"><a class="nav-link"  routerLink="/contact" routerLinkActive="active">contact</a></li>
+        <li class="nav-item"><a class="nav-link" routerLink="/signup" routerLinkActive="active"><button class="signup">signup</button></a></li>
+        <li class="nav-item"><a class="nav-link" routerLink="/login" routerLinkActive="active"><button class="login">login</button></a></li>
+      
+      </ul>
+     
+    </div>
+  </div>
+</nav>
+<div class="container">
+
+<router-outlet></router-outlet>
+</div>

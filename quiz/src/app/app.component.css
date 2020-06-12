@@ -1,0 +1,53 @@
+.navbar-custom{
+    background-color:#ccafdb;
+    z-index: 1;
+    height: 68px;
+    width: 95%;
+    margin-left: 2.5%;
+    border-radius: 10px;
+    position: relative;
+}
+.navbar-item{
+
+    padding-left: 60px;
+}
+/* Set the border color */ 
+  li{
+      margin-top: 25px;
+  }     
+ .active1{
+    margin-top: 25px;
+    margin-left: 10px;
+}  
+
+.offset{
+    margin-top: -15px;
+    background-color: #ccafdb;
+    width: 100%;
+    /* margin-left: 2.5%; */
+    border-radius:10px ;
+    overflow: hidden;
+}
+
+
+.nav-cus{
+    padding-left:70px;
+     color:black;
+}
+.login{
+    background-color:  rgba(238, 25, 96, 0.671);
+    border-radius: 16px;
+    line-height: 30px;
+    outline:hidden ;
+    width: 70px;
+}
+.signup{
+    background-color:  rgba(96, 20, 182, 0.521);
+    border-radius: 16px;
+    line-height: 30px;
+    outline:hidden ;
+    width: 80px;
+}
+.active{
+    text-underline-position: below;
+}
